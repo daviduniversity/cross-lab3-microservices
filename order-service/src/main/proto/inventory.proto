@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "org.acme.inventory";
+option java_outer_classname = "InventoryProto";
+
+package inventory;
+
+service InventoryGrpc {
+  rpc CheckStock (StockRequest) returns (StockResponse);
+}
+
+message StockRequest {
+  string itemName = 1;
+}
+
+message StockResponse {
+  bool exists = 1;
+  int32 quantity = 2;
+}
