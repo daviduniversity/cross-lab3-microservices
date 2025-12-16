@@ -1,10 +1,12 @@
 package org.acme;
 
+import io.quarkus.security.Authenticated;
 import jakarta.ws.rs.GET;
 import jakarta.ws.rs.Path;
 import jakarta.ws.rs.QueryParam;
 
 @Path("/payment")
+@Authenticated
 public class PaymentResource {
 
     @GET

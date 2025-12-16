@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quarkus Shop</title>
+</head>
+<body>
+<h1>Welcome to Quarkus Shop, {username}!</h1>
+
+<form action="/store/order" method="post">
+    <label>Item:</label>
+    <input type="text" name="item" value="laptop" readonly>
+    <button type="submit">Buy Laptop</button>
+</form>
+
+<p>Last status: {result}</p>
+
+<a href="/logout">Logout</a>
+</body>
+</html>

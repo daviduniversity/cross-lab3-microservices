@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  keycloak:
+    image: quay.io/keycloak/keycloak:25.0.6
+    container_name: lab3-keycloak
+    command: start-dev
+    environment:
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "9090:8080"  # Зовнішній порт 9090, внутрішній 8080
+    volumes:
+      - ./keycloak-data:/opt/keycloak/data # Щоб дані не зникали

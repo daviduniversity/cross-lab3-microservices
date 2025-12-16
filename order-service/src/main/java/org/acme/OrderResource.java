@@ -1,6 +1,7 @@
 package org.acme;
 
 import io.quarkus.grpc.GrpcClient;
+import io.quarkus.security.Authenticated;
 import io.smallrye.mutiny.Uni;
 import jakarta.inject.Inject;
 import jakarta.ws.rs.GET;
@@ -11,6 +12,7 @@ import org.acme.inventory.StockRequest;
 import org.eclipse.microprofile.rest.client.inject.RestClient;
 
 @Path("/order")
+@Authenticated
 public class OrderResource {
 
     @GrpcClient("inventory-client") // Підключаємося до Складу (gRPC)
