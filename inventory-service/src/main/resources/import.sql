@@ -1,0 +1,2 @@
+INSERT INTO InventoryEntity(id, name, quantity) VALUES (nextval('InventoryEntity_SEQ'), 'laptop', 5);
+INSERT INTO InventoryEntity(id, name, quantity) VALUES (nextval('InventoryEntity_SEQ'), 'phone', 10);
